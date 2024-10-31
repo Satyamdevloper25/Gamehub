@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Digital Gaming Store</title>
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0&icon_names=computer" />
+    <link rel="stylesheet" href="mainpage.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+
+    
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap');
+        *{
+            padding: 0;
+            margin: 0;
+            font-family: Raleway;
+            text-transform: capitalize;
+        }
+        body {
+            background-color: #f8f9fa;
+        }
+        .hero {
+            background-image: url('https://source.unsplash.com/random/1920x1080/?gaming');
+            background-size: cover;
+            height: 100vh;
+            color: white;
+        }
+        nav{
+            display: flex;
+            justify-content: space-evenly;
+        }
+        ul{
+            padding-top:5px;
+            margin-left: 120vh;
+        }
+        li{
+            text-decoration: none;
+            display: inline;
+            margin: 10px;
+            font-weight: bold;
+            gap: 4px;
+            
+
+
+        }
+        a{
+           
+            text-decoration: none;
+            color: #000;
+
+        }
+        a:hover{
+            text-decoration: none;
+            color: #000;
+        }
+        section{
+            width: 100%;
+        }
+        .main-product{
+            background: url('gamepad.jpg') center no-repeat fixed;
+            background-position: center;
+            background-size: cover;
+            object-fit: cover;
+            color: #fff;
+            height: 100vh;
+            
+            image-resolution: 600dpi;
+        }
+        .main-product h1  {
+        font-weight: 900;
+        padding-top: 30vh;
+        padding-left: 20vh;
+        font-size: 12vh;
+        }
+        .main-product h3{
+            font-weight: 600;
+            font-size: 8vh;
+            text-decoration: wavy;
+        
+        padding-left: 20vh;
+        }
+        h3{
+            text-decoration: wavy;
+        
+        }
+        
+        .product-welcome{
+            display: inline;
+            padding: 2px;
+            
+            font-size: 3.5vh;
+           
+            
+        }
+        .product-welcome p{
+            margin-left: 10vh;
+            font-weight: 650;
+            
+
+        }
+        .features{
+            
+            background-position: center;
+            background-size: cover;
+            object-fit: cover;
+
+            height: 95vh;
+        }
+        .features-icon{
+            display: flex;
+        }
+        .features h1{
+            text-align: center;
+        }
+         hr{
+           
+           color: #000;
+        }
+        .featureslist{
+            height:50vh;
+            display: inline;
+            width: 50vh;
+            margin: 4vh;
+            box-shadow:  0 5px 10px rgba(190, 175, 175, 0.979), 0 2px 20px rgba(165, 13, 13, 0.05);
+        }
+        .bx {
+            font-size: large;
+            align-items:center;
+        }
+        .features-line{
+            text-align: center;
+            font-weight: bold;
+        }
+        #btn-pref{
+            border-radius: 50%;
+            height: 10vh;
+            width: 10vh;
+            background: transparent;
+            color: #000;
+        }
+        .team-members {
+            display: flex;
+        }
+        .team-members img{
+            border-radius: 50%;
+            height: 10vh;
+            width: 10vh;
+            object-fit: cover;
+
+        }
+    </style>
+</head>
+<body>
+
+ <header>
+    <nav>
+        <i><h3>GameHub</h3></i>
+        <ul>
+            <a href="#"  ><li>Home</li></a>
+            <a href="../about.html" ><li>About</li></a>
+          
+            <a href="../OurTeam/ourteam.html" ><li>Our Team</li></a>
+            <a href="store.html" ><li>Store</li></a>
+
+            
+        </ul>
+    </nav>
+ </header>
+
+<section class="main-product">
+    <h1>
+        Welcome To
+    </h1>
+    <h3>
+        GameHub
+    </h3>
+    <div class="product-welcome">
+        <p>Welcome to Game Hub! Here, you can share your gaming journey, connect with <br>fellow gamers, and explore tips and reviews. Join us today and expand your <br>gaming experience!</p>
+    </div>
+   
+</section>
+
+
+
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script>
+        const btn = document.querySelector("#btn-pref");
+    
+        btn.addEventListener("click", () => {
+            // Create a new div container
+            const newDiv = document.createElement("div");
+            newDiv.classList.add("team-members-details"); // Adding a class for styling
+    
+            // Create a profile image div
+            const profileImgDiv = document.createElement("div");
+            profileImgDiv.classList.add("profileimg");
+    
+            // Create the image element
+            const img = document.createElement("img");
+            img.src = "https://static.vecteezy.com/system/resources/thumbnails/036/095/141/small_2x/ai-generated-a-anime-style-boy-with-brown-hair-photo.jpg";
+            img.alt = "New Team Member";
+    
+            // Append the image to the profile image div
+            profileImgDiv.appendChild(img);
+    
+            // Create a details div
+            const detailsDiv = document.createElement("div");
+            detailsDiv.classList.add("details");
+    
+            // Create a heading for the name
+            const name = document.createElement("h6");
+            name.textContent = "New Member";  // Replace this with the real name
+    
+            // Create a paragraph for the title
+            const role = document.createElement("p");
+            role.textContent = "Role";  // Replace this with the real role
+    
+            // Append the name and role to the details div
+            detailsDiv.appendChild(name);
+            detailsDiv.appendChild(role);
+    
+            // Append the profile image div and the details div to the new div container
+            newDiv.appendChild(profileImgDiv);
+            newDiv.appendChild(detailsDiv);
+    
+            // Find the parent element where the new member will be added
+            const teamMembersSection = document.querySelector(".team-members");
+            teamMembersSection.appendChild(newDiv);
+        });
+    </script>
+    
+
+</body>
+</html>

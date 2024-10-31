@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Our Exceptional Team</title>
+    <link rel="stylesheet" href="ourteam.css">
+    <style>
+       /* Reset and base styles */
+*, *::before, *::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --primary-color: #fff; /* Primary color */
+    --secondary-color: #34495e; /* Secondary color */
+    --background-color: #fdfdfd; /* Light background */
+    --text-color: #555; /* Text color */
+    --card-background: #fff;
+    --card-shadow: 0 5px 15px rgba(0, 0, 0, 0.2); /* Soft shadow */
+    --transition-speed: 0.3s;
+}
+
+body {
+    font-family: 'Poppins', sans-serif; /* Font style */
+    line-height: 1.6;
+    color: var(--text-color);
+    background-color: var(--background-color);
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column; 
+}
+
+/* Navbar styles */
+header {
+    background-color: var(--primary-color);
+    padding: 1rem;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between; /* Space out items */
+    align-items: center; /* Center vertically */
+    background-color: white;
+}
+
+ul {
+    list-style: none; /* Remove default list styling */
+    display: flex; /* Flexbox for horizontal layout */
+}
+
+li {
+    margin: 0 15px; /* Margin between items */
+}
+
+a {
+    color: rgb(17, 17, 17); /* Navbar link color */
+    text-decoration: none; /* Remove underline */
+    font-weight: bold; /* Bold text */
+}
+
+a:hover {
+    text-decoration: underline; /* Underline on hover */
+}
+
+/* Team section styles */
+.team-section {
+    max-width: 1200px;
+    width: 100%;
+    margin: 2rem auto; /* Center the section */
+    background-color: var(--card-background);
+    border-radius: 10px; /* Rounded corners */
+    box-shadow: var(--card-shadow);
+}
+
+.team-header {
+    text-align: center;
+    padding: 2rem; /* Padding around header */
+    background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+    color: #fff;
+}
+
+.team-title {
+    font-size: 2.5rem; /* Title size */
+    margin-bottom: 0.5rem;
+    position: relative;
+    display: inline-block;
+}
+
+.team-title::after {
+    content: '';
+    position: absolute;
+    bottom: -5px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 40px; /* Underline width */
+    height: 3px;
+    background-color: #fff;
+    transition: width var(--transition-speed) ease;
+}
+
+.team-title:hover::after {
+    width: 80px; /* Underline hover effect */
+}
+
+.team-subtitle {
+    font-size: 1rem; /* Subtitle size */
+    opacity: 0.9;
+}
+
+.team-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); /* Responsive grid */
+    gap: 1.5rem; /* Space between items */
+    padding: 2rem; /* Padding inside grid */
+}
+
+.team-member {
+    background-color: var(--card-background);
+    border-radius: 10px; /* Rounded corners */
+    overflow: hidden;
+    box-shadow: var(--card-shadow);
+    transition: all var(--transition-speed) ease;
+    cursor: pointer;
+}
+
+.team-member:hover {
+    transform: translateY(-5px); /* Slight lift on hover */
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15); /* Hover shadow effect */
+}
+
+.member-image-container {
+    position: relative;
+    padding-top: 100%; /* 1:1 Aspect Ratio */
+    overflow: hidden;
+}
+
+.member-image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform var(--transition-speed) ease;
+}
+
+.team-member:hover .member-image {
+    transform: scale(1.05); /* Scale effect on hover */
+}
+
+.member-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(to top, rgba(0, 0, 0, 0.6) 0%, rgba(0, 0, 0, 0) 100%);
+    opacity: 0;
+    transition: opacity var(--transition-speed) ease;
+}
+
+.team-member:hover .member-overlay {
+    opacity: 0.7; /* Overlay effect on hover */
+}
+
+.member-info {
+    padding: 1rem; /* Inner padding */
+    text-align: center;
+}
+
+.member-name {
+    font-size: 1.2rem; /* Name size */
+    font-weight: 700; /* Bold name */
+    margin-bottom: 0.5rem;
+    color: var(--secondary-color);
+}
+
+.member-role {
+    font-size: 0.9rem; /* Role size */
+    color: var(--primary-color);
+    margin-bottom: 1rem;
+}
+.social-links {
+            display: flex;
+            justify-content: center;
+            margin-top: 1rem;
+            color: #3213b9;
+        }
+
+        .social-link {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 40px;
+            height: 40px;
+            margin: 0 0.5rem;
+           
+            background-color: rgba(18, 80, 122, 0.1);
+            text-decoration: none;
+            border-radius: 50%;
+            transition: all var(--transition-speed) ease;
+        }
+
+        .social-link:hover {
+            color: #3213b9;
+            background-color: var(--primary-color);
+        }
+
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .team-title {
+        font-size: 2rem; /* Smaller title on mobile */
+    }
+
+    .team-subtitle {
+        font-size: 0.9rem; /* Smaller subtitle on mobile */
+    }
+
+    .team-grid {
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); /* Adjust grid on mobile */
+    }
+}
+
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <i><h3>GameHub</h3></i>
+            <ul>
+                <a href="#"><li>Home</li></a>
+                <a href="../about.html"><li>About</li></a>
+              
+                <a href="#"><li>Our Team</li></a>
+                <a href="/create account/store.html"><li>Store</li></a>
+            </ul>
+        </nav>
+    </header>
+    
+    <section class="team-section">
+        <header class="team-header">
+            <h2 class="team-title">Meet Our Exceptional Team</h2>
+            <p class="team-subtitle">Dedicated professionals working together to bring innovation to life</p>
+        </header>
+        <div class="team-grid">
+            <div class="team-member" data-member-id="1">
+                <div class="member-image-container">
+                    <img src="https://finetechhub.com/wp-content/uploads/2024/07/Anime-boy-wallpaper-and-white-anime-boy-dp-1024x1024.jpg.webp" alt="" class="member-image">
+                    <div class="member-overlay"></div>
+                </div>
+                <div class="member-info">
+                    <h3 class="member-name">John Doe</h3>
+                    <p class="member-role">Senior Developer</p>
+                    
+                    <div class="social-links">
+                        <a href="#" class="social-link" aria-label="John Doe's LinkedIn profile">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path><rect x="2" y="9" width="4" height="12"></rect><circle cx="4" cy="4" r="2"></circle></svg>
+                        </a>
+                        <a href="#" class="social-link" aria-label="John Doe's Twitter profile">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M23 3a10.9 10.9 0 0 1-3.14 1.53 4.48 4.48 0 0 0-7.86 3v1A10.66 10.66 0 0 1 3 4s-4 9 5 13a11.64 11.64 0 0 1-7 2c9 5 20 0 20-11.5a4.5 4.5 0 0 0-.08-.83A7.72 7.72 0 0 0 23 3z"></path></svg>
+                        </a>
+                    </div>
+                </div>
+            </div>
+           
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const teamMembers = document.querySelectorAll('.team-member');
+            const modal = document.getElementById('memberModal');
+            const closeModal = document.querySelector('.close-modal');
+
+            teamMembers.forEach(member => {
+                member.addEventListener('click', () => {
+                    const name = member.querySelector('.member-name').textContent;
+                    const role = member.querySelector('.member-role').textContent;
+                    const bio = member.querySelector('.member-bio').textContent;
+                    const image = member.querySelector('.member-image').src;
+                    const socialLinks = member.querySelector('.social-links').innerHTML;
+
+                    modal.querySelector('.modal-image').src = image;
+                    modal.querySelector('.modal-name').textContent = name;
+                    modal.querySelector('.modal-role').textContent = role;
+                    modal.querySelector('.modal-bio').textContent = bio;
+                    modal.querySelector('.modal-social-links').innerHTML = socialLinks;
+
+                    modal.classList.add('active');
+                });
+            });
+
+            closeModal.addEventListener('click', () => {
+                modal.classList.remove('active');
+            });
+
+            window.addEventListener('click', (event) => {
+                if (event.target === modal) {
+                    modal.classList.remove('active');
+                }
+            });
+        });
+    </script>
+</body>
+</html>

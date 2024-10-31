@@ -1,0 +1,184 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@300;400;500;600;700&family=Orbitron:wght@400;500;600;700;800;900&display=swap');
+
+:root {
+    --primary-color: #4a90e2;
+    --secondary-color: #f3f4f6;
+    --text-color: #333333;
+    --text-color-light: #666666;
+    --background-color: #ffffff;
+    --shadow-color: rgba(0, 0, 0, 0.1);
+    --transition-speed: 0.3s;
+}
+
+body {
+    font-family: 'Raleway';
+    margin: 0;
+    padding: 0;
+    background-color: var(--secondary-color);
+    color: var(--text-color);
+    line-height: 1.6;
+    font-size: 16px;
+}
+
+nav {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+nav ul {
+    padding-top: 5px;
+    margin-left: 120vh;
+}
+nav ul a:hover::after {
+  transform: scaleX(1);
+}
+
+
+nav li {
+    text-decoration: none;
+    display: inline;
+    margin: 10px;
+    font-weight: bold;
+    gap: 4px;
+}
+
+nav a {
+    text-decoration: none;
+    color: #000;
+}
+
+nav a:hover {
+    text-decoration: none;
+    color: #000;
+}
+
+.container {
+    max-width: 1000px;
+    margin: 40px auto;
+    padding: 60px 40px;
+    background-color: var(--background-color);
+    box-shadow: 0 10px 30px var(--shadow-color);
+    border-radius: 20px;
+    transition: transform var(--transition-speed) ease, box-shadow var(--transition-speed) ease;
+}
+
+.container:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 40px var(--shadow-color);
+}
+
+.about-us h1 {
+    font-size: 3.5em;
+    color: var(--primary-color);
+    text-align: center;
+    margin-bottom: 40px;
+    font-weight: 800;
+    letter-spacing: -1px;
+    line-height: 1.2;
+    position: relative;
+    padding-bottom: 20px;
+}
+
+.about-us h1::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 80px;
+    height: 4px;
+    background-color: var(--primary-color);
+    border-radius: 2px;
+}
+
+.about-us p {
+    font-size: 1.125em;
+    line-height: 1.8;
+    color: var(--text-color-light);
+    margin-bottom: 30px;
+    text-align: justify;
+    hyphens: auto;
+    opacity: 0;
+    transform: translateY(20px);
+    animation: fadeInUp 0.6s ease forwards;
+}
+
+@keyframes fadeInUp {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+.social-media {
+  text-align: center; /* Centers the content within the social-media section */
+}
+.social-media h2 {
+    font-size: 2em;
+    color: var(--primary-color);
+    margin-bottom: 25px;
+    text-align: center;
+    font-weight: 700;
+}
+
+.social-media ul {
+    list-style: none;
+    padding: 0;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    flex-wrap: nowrap;
+}
+
+.social-media li {
+    margin: 10px;
+}
+
+.social-media a {
+    text-decoration: none;
+    color: var(--text-color);
+    font-weight: 600;
+    transition: color var(--transition-speed) ease, transform var(--transition-speed) ease;
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: var(--secondary-color);
+    border-radius: 30px;
+    font-size: 1em;
+}
+
+.social-media a:hover {
+    color: var(--primary-color);
+    transform: translateY(-3px);
+    box-shadow: 0 5px 15px var(--shadow-color);
+}
+
+@media (max-width: 768px) {
+    .container {
+        padding: 40px 20px;
+        margin: 20px;
+    }
+    .about-us h1 {
+        font-size: 2.5em;
+    }
+    .about-us p {
+        font-size: 1em;
+    }
+    .social-media h2 {
+        font-size: 1.75em;
+    }
+    .social-media a {
+        padding: 8px 16px;
+        font-size: 0.9em;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .container,
+    .social-media a {
+        transition: none;
+    }
+    .about-us p {
+        animation: none;
+        opacity: 1;
+        transform: none;
+    }
+}

@@ -1,0 +1,42 @@
+.main-product button{
+width: 15vh;
+height: 8vh;
+border-radius: 25px;
+margin-left: 10vh;
+margin-bottom: 20px;
+
+}
+.main-product button:hover{
+    @keyframes sparklebutton {
+        from {}
+    }
+}.container-about{
+    height: 70vh;
+    
+}
+.container-about h2 {
+    text-align: center;
+    padding: 20px;
+}
+.container-about p{
+    font-weight: bold;
+    font-size: medium;
+    margin: 10vh;
+}
+.card-about{
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+}
+.main input{
+    height: 8vh;
+    width: 90vh;
+    border-radius: 20px;
+    
+    margin: 10vh;
+}
+.main{
+    margin: 30px;
+}
+.main button {
+    height: 6vh;
+    width: 6vh;
+}
